@@ -24,7 +24,8 @@ public class Singleton {
 }
 Is example mein, getInstance() method ke through hi ek instance banaya ja sakta hai aur wo instance sabhi calls ke liye common hoga.
 
-
+Q - can we print something on console without using main method ?
+Ans - Until java 1.6 it's possible by using static block ,but from java 1.7 onwards we can not execute java program without main method.
 
 
 -------------------------------- How to upload project on github ---------------------------------
