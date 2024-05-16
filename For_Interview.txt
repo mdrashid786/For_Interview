@@ -372,6 +372,20 @@ docker container rm jatin
 if container is in running the use this cammand for delete
 docker container rm jatin -f
 
+delete all image or conatainer 
+docker system prune -a
+
+how to create image with vaersion
+docker build -t imageName:version
+example 
+docker build -t my-new-image:v2 .
+
+run conatiner from cmd
+docker run --name conatinerName -p newPort:alreadyaxistPort alreadyAxistimageName
+example 
+docker run --name basic-new-app-container--v2 -p 5000:5000 my-new-image:v2
+
+
 ---------------------------------------------end here docker operation --------------------------------------------------------
 
 PS C:\Users\pc\Videos\basic-app> npm init
