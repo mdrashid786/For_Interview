@@ -350,6 +350,9 @@ EXPOSE 5000
 CMD [ "node", "index.js" ]
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+create image coammand from terminal
+docker build -t basic_application .
+
 PS C:\Users\pc\Videos\basic-app> npm init
 This utility will walk you through creating a package.json file.    
 It only covers the most common items, and tries to guess sensible defaults.
