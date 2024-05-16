@@ -334,3 +334,131 @@ git push -u origin main
 git remote add origin https://github.com/mdrashid786/demoSecurity.git
 git branch -M main
 git push -u origin main
+
+
+
+-------------------------------------------------------------------------------------------------
+
+docker image create cammand
+
+PS C:\Users\pc\Videos\basic-app> npm init
+This utility will walk you through creating a package.json file.    
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (basic-app) npm init
+Sorry, name can only contain URL-friendly characters.
+package name: (basic-app)
+version: (1.0.0)
+description: docker tutorial
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\pc\Videos\basic-app\package.json:
+
+{
+  "name": "basic-app",
+  "version": "1.0.0",
+  "description": "docker tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+Is this OK? (yes) yes
+npm notice 
+npm notice New minor version of npm available! 10.1.0 -> 10.8.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.0
+npm notice Run npm install -g npm@10.8.0 to update!
+npm notice
+PS C:\Users\pc\Videos\basic-app> npm i express
+
+added 64 packages, and audited 65 packages in 5s
+
+12 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+PS C:\Users\pc\Videos\basic-app> npm index.js
+Unknown command: "index.js"
+
+To see a list of supported npm commands, run:
+  npm help
+PS C:\Users\pc\Videos\basic-app> node index.js
+app is running on 5000 port
+PS C:\Users\pc\Videos\basic-app> node index.js
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:1
++ touch dockerFile
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+operable program. Check the spelling of the name, or if a path was included, verify that the path                                       function, script file, or
+is correct and try again.                                           ncluded, verify that the path
+At line:1 char:1
++ touch dockerfile
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\pc\Videos\basic-app> docker build -t basic-app .
+[+] Building 7.9s (8/8) FINISHED                                                                                                                       docker:default
+ => [internal] load build definition from dockerfile                                                                                                             0.1s
+ => => transferring dockerfile: 114B                                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                                                                   0.0s
+ => [internal] load .dockerignore                                                                                                                                0.1s
+ => => transferring context: 2B                                                                                                                                  0.0s
+ => [internal] load build context                                                                                                                                0.7s
+ => [1/3] FROM docker.io/library/node:latest                                                                                                                     0.7s 
+ => [2/3] COPY . .                                                                                                                                               1.1s 
+ => [3/3] RUN npm install                                                                                                                                        5.3s 
+ => exporting to image                                                                                                                                           0.3s 
+ => => exporting layers                                                                                                                                          0.1s 
+ => => writing image sha256:d61539a339b4b5cd71f4564c0d16f8311e87892ddf28a4ca8bcc40996aff194b                                                                     0.0s 
+ => => naming to docker.io/library/basic-app                                                                                                                     0.0s 
+
+View build details: docker-desktop://dashboard/build/default/default/nuc8cjcnfwahvbjbv1mg37h2x
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+PS C:\Users\pc\Videos\basic-app> node index.js
+node:events:492
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (C:\Users\pc\Videos\basic-app\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\pc\Videos\basic-app\index.js:28:5)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+
+Node.js v20.9.0
+PS C:\Users\pc\Videos\basic-app> 
