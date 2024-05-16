@@ -353,6 +353,25 @@ CMD [ "node", "index.js" ]
 create image coammand from terminal
 docker build -t basic_application .
 
+check how many images are available
+docker images
+
+check how many container are available 
+docker ps -a
+
+how to delete image
+docker image rm  basic_application1
+
+if image is in-used then delete image using this cammand
+docker image rm  basic_application1 -f
+
+how to delete container 
+docker container rm jatin
+
+if container is in running the use this cammand for delete
+docker container rm jatin -f
+
+
 PS C:\Users\pc\Videos\basic-app> npm init
 This utility will walk you through creating a package.json file.    
 It only covers the most common items, and tries to guess sensible defaults.
