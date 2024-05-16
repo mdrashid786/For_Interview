@@ -350,6 +350,7 @@ EXPOSE 5000
 CMD [ "node", "index.js" ]
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+--------------------------------------------------for docker operation ----------------------------------------------------
 create image coammand from terminal
 docker build -t basic_application .
 
@@ -371,6 +372,7 @@ docker container rm jatin
 if container is in running the use this cammand for delete
 docker container rm jatin -f
 
+---------------------------------------------end here docker operation --------------------------------------------------------
 
 PS C:\Users\pc\Videos\basic-app> npm init
 This utility will walk you through creating a package.json file.    
