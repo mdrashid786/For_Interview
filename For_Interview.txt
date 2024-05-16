@@ -341,6 +341,15 @@ git push -u origin main
 
 docker image create cammand
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this this project file code : file name is dockerfile without any extention 
+FROM node
+COPY . .
+RUN npm install
+EXPOSE 5000
+CMD [ "node", "index.js" ]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 PS C:\Users\pc\Videos\basic-app> npm init
 This utility will walk you through creating a package.json file.    
 It only covers the most common items, and tries to guess sensible defaults.
