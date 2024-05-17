@@ -492,7 +492,13 @@ docker push pasteYourHubDockerRepositoryName
 Example 
 docker push mdrashid00/node-yt-app
 
-
+and push repository
+then pull repository
+first open hub.docker.com then click on tags tab and then copy pull cammand from right side 
+cammand is : docker pull mdrashid00/node-yt-app:latest
+and this hit this cammand in vs code terminal
+docker pull mdrashid00/node-yt-app:latest
+after that open docker deshtop and run your new image 
 
 
 ---------------------------------------------end here docker operation --------------------------------------------------------
