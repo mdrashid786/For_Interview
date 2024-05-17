@@ -500,6 +500,25 @@ and this hit this cammand in vs code terminal
 docker pull mdrashid00/node-yt-app:latest
 after that open docker deshtop and run your new image 
 
+upload image on server | play-with-docker 
+first create repo on hub.docker.com 
+after that create image using this cammand
+docker buildx build --platform linux/amd64 -t mdrashid00/node-demo-app .
+after that push container same as previous 
+docker push mdrashid00/node-demo-app
+after push code then go to play with docker website
+url : https://labs.play-with-docker.com/
+after login with docker account on play with docker website
+after that again on hub.docker.com website and then copy pull cammand 
+and then create instance on play with docker website
+and page pull cammand in play-with-docker website cmd
+docker pull mdrashid00/node-demo-app
+after finish pull then you can check image avalaible or not by using this cammand 
+docker images
+after that run image by using thus cammand 
+docker run -p mdrashid00/node-demo-app
+after that click on top on port no now see your application is live
+
 
 ---------------------------------------------end here docker operation --------------------------------------------------------
 
