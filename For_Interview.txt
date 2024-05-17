@@ -466,7 +466,31 @@ and this is Package.json code
 and this is cammand to run on docker conatainer server
 docker run --name my-app-container -p 5000:5000 --rm -v C:\Users\pc\Videos\basic-app:/app -e CHOKIDAR_USEPOLLING=true my-application
 
-that sheet
+create compose cammand
+create first compose.yaml file 
+and write this code inside yaml file
+services:
+  img:
+   build: .
+   container_name: basic-container
+   ports:
+    - 5000:5000
+
+after that hit this bottom cammand
+docker compose up
+
+share image on docker hub and push image on docker hub
+first create repository on hub.docker.com
+after that copy repository name
+this is my repository name mdrashid00/node-yt-app
+after that create image from vs code terminal 
+cammand is  docker build -t mdrashid00/node-yt-app .
+and then check you login or not by using this cammand 
+docker login
+after that push your image on docker hub cammand is this in bottom
+docker push pasteYourHubDockerRepositoryName
+Example 
+docker push mdrashid00/node-yt-app
 
 
 
