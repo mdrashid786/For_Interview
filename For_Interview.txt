@@ -516,7 +516,7 @@ docker pull mdrashid00/node-demo-app
 after finish pull then you can check image avalaible or not by using this cammand 
 docker images
 after that run image by using thus cammand 
-docker run -p mdrashid00/node-demo-app
+docker run -p 5000:5000 mdrashid00/node-demo-app
 after that click on top on port no now see your application is live
 
 
