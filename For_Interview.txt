@@ -385,6 +385,55 @@ docker run --name conatinerName -p newPort:alreadyaxistPort alreadyAxistimageNam
 example 
 docker run --name basic-new-app-container--v2 -p 5000:5000 my-new-image:v2
 
+run project on docker container to update if any changes from user side 
+ this bottom code is for dockerfile
+
+FROM node:latest
+# Install nodemon globally
+RUN npm install -g nodemon
+# Set working directory
+WORKDIR /app
+# Copy package.json and install dependencies first (better for caching)
+COPY package.json package-lock.json ./
+RUN npm install
+# Copy the rest of the application
+COPY . .
+# Expose the desired port
+EXPOSE 5000
+# Use npm run dev to start the application, enabling polling for file changes
+CMD ["npm", "run", "dev"]
+
+and this code for Package.json file 
+
+{
+  "name": "basic-app",
+  "version": "1.0.0",
+  "description": "docker tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --legacy-watch index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
+
+after added this all then first create Image 
+docker build -t my-application .
+after created Image then run this image in bottom code is running for docker container cammand
+docker run --name my-app-container -p 5000:5000 --rm -v C:\Users\pc\Videos\basic-app:/app -e CHOKIDAR_USEPOLLING=true my-application
+after that i project is started on docker conatainer
+then if you changes anythings then automatically changes on docker container file you can check on live by refresh url 
+
+
+and this given bottom code is for local to run project 
+npm run dev
+
+
 
 ---------------------------------------------end here docker operation --------------------------------------------------------
 
