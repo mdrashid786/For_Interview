@@ -433,6 +433,42 @@ then if you changes anythings then automatically changes on docker container fil
 and this given bottom code is for local to run project 
 npm run dev
 
+and this 2nd step to run on docker conatiner :
+this dockerfile code
+
+FROM node:latest
+RUN npm install -g nodemon
+WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 5000
+CMD [ "npm","run","dev" ]
+
+and this is Package.json code
+{
+  "name": "basic-app",
+  "version": "1.0.0",
+  "description": "docker tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon index.js"
+ 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
+
+and this is cammand to run on docker conatainer server
+docker run --name my-app-container -p 5000:5000 --rm -v C:\Users\pc\Videos\basic-app:/app -e CHOKIDAR_USEPOLLING=true my-application
+
+that sheet
+
+
 
 
 ---------------------------------------------end here docker operation --------------------------------------------------------
