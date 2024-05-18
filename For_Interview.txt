@@ -307,7 +307,39 @@ Abstract classes are used when you want to provide a common interface for a grou
 
 
 
++_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+
+1. What is Docker?
+Docker is a platform that allows you to develop, deploy, and run applications in containers. Containers are lightweight, portable, and self-sufficient environments that package everything needed to run an application, including libraries and dependencies.
 
+2. What is the difference between Docker container and virtual machine (VM)?
+Docker containers share the host operating system kernel, while virtual machines run their own operating system kernel. This makes containers more lightweight and efficient compared to VMs.
+
+3. How do you create a Docker container?
+You can create a Docker container by writing a Dockerfile, which contains instructions for building the container image. Once the Dockerfile is written, you use the docker build command to build the image, and then the docker run command to run the container.
+
+4. What is a Docker image?
+A Docker image is a read-only template that contains the instructions for creating a Docker container. It includes everything needed to run an application, such as code, runtime, libraries, and dependencies.
+
+5. How do you share Docker images with others?
+Docker images can be shared via Docker Hub, a cloud-based registry service provided by Docker. You can push your images to Docker Hub using the docker push command, and others can pull them using the docker pull command.
+
+6. What is Docker Compose?
+Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure the application's services and dependencies, making it easy to define, run, and manage complex applications.
+
+7. How do you scale Docker containers?
+Docker containers can be scaled horizontally by running multiple instances of the same container across multiple hosts. Docker Swarm and Kubernetes are popular tools for orchestrating and managing containerized applications at scale.
+
+8. What is Docker Swarm?
+Docker Swarm is a native clustering and orchestration tool for Docker containers. It allows you to create and manage a cluster of Docker hosts, called a swarm, and deploy and scale applications across the swarm.
+
+9. What is Docker volume?
+Docker volume is a persistent data storage mechanism that allows containers to store data outside the container's writable layer. Volumes can be shared between containers and persist even after the container is stopped or removed.
+
+10. How do you monitor Docker containers?
+Docker provides several built-in tools for monitoring containers, including Docker Stats, Docker Events, and Docker Logs. Additionally, there are third-party monitoring solutions and container orchestration platforms like Kubernetes that offer advanced monitoring and logging capabilities.
+
+
++_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+
 
 
 
