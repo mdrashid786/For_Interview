@@ -341,10 +341,113 @@ Docker provides several built-in tools for monitoring containers, including Dock
 
 +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Resume Interview Questions with Answer
 
+Technical Questions
+Core Java Concepts
 
+Differences between Java 7, 8, and 11:
 
+Java 7: Introduced features like the try-with-resources statement, catch multiple exceptions, and the Diamond operator.
+Java 8: Introduced lambdas, the Stream API, new Date and Time API, and default methods in interfaces.
+Java 11: Introduced local variable syntax for lambda parameters, HTTP Client API, and removed Java EE and CORBA modules.
+Main features of Java 8:
 
+Lambdas, Stream API, new Date and Time API, default methods in interfaces, and Nashorn JavaScript Engine.
+Object-oriented programming principles:
+
+Inheritance: Mechanism for a new class to use properties and methods of an existing class.
+Polymorphism: Ability of different classes to respond to the same method call in different ways.
+Encapsulation: Bundling of data with methods that operate on that data.
+Abstraction: Hiding the complex implementation details and showing only the essential features of an object.
+Spring Framework
+
+Core components of Spring Boot:
+
+Spring Boot Starter: Simplifies the dependency management.
+Spring Boot Auto Configuration: Automatically configures Spring application based on the dependencies.
+Spring Boot Actuator: Provides production-ready features like monitoring and metrics.
+Managing dependencies in Spring Boot:
+
+Use spring-boot-starter dependencies in pom.xml or build.gradle to easily manage the required libraries.
+How Spring Security works:
+
+Provides authentication and authorization features, can be configured using annotations or XML, supports various authentication mechanisms like in-memory, LDAP, and database authentication.
+Spring Data JPA:
+
+Simplifies database operations by providing a repository layer, reducing boilerplate code for CRUD operations and queries.
+RESTful Web Services
+
+RESTful web services principles:
+
+Statelessness, client-server architecture, resource representation, and using standard HTTP methods (GET, POST, PUT, DELETE).
+Creating a RESTful service with Spring Boot:
+
+Use @RestController for defining controllers, @RequestMapping for mapping URLs to methods, and @ResponseBody for returning responses.
+Advantages of REST over SOAP:
+
+REST is lightweight, easier to implement, and uses standard HTTP methods, while SOAP is more rigid and requires more overhead.
+SQL and Databases
+
+Optimizing a query in SQL Server:
+
+Use indexes, avoid unnecessary columns in SELECT, use appropriate joins, and analyze the query execution plan.
+Handling transactions in Spring:
+
+Use @Transactional annotation to manage transactions, ensuring data integrity and rollback in case of errors.
+Using MySQL or SQL Server to solve a problem:
+
+Example: Optimized an e-commerce platform by using indexed queries to speed up product search and improve user engagement.
+Microservices and Docker
+
+Microservices vs. monolithic architectures:
+
+Microservices break down applications into small, independent services, while monolithic architectures use a single unified codebase.
+Containerizing a Java application using Docker:
+
+Create a Dockerfile, use a base image (e.g., openjdk), copy application JAR, and define entry points to run the application.
+Managing microservices in production:
+
+Use tools like Kubernetes for orchestration, monitoring with Prometheus, and logging with ELK stack.
+Tools and Technologies
+
+Using Git and GitHub:
+
+Git for version control, creating branches, merging code, and GitHub for repository hosting and collaboration.
+Using Postman for testing APIs:
+
+Create requests, set parameters, and validate responses for API testing.
+Experience with IntelliJ IDEA or Eclipse:
+
+Use for code writing, debugging, and managing dependencies in Java projects.
+Behavioral and Situational Questions
+Problem-Solving and Projects
+
+Challenging project:
+
+Developed a scalable e-commerce platform, overcame challenges in performance optimization, resulting in increased user engagement.
+Troubleshooting a difficult issue:
+
+Debugged a complex issue in the HR module, identified a database bottleneck, and optimized queries to improve performance.
+Team Collaboration
+
+Handling conflicts:
+
+Addressed conflicts by facilitating open communication, understanding different perspectives, and finding common ground for resolution.
+Mentoring a junior developer:
+
+Provided guidance on coding practices, conducted code reviews, and encouraged continuous learning through pair programming.
+Work Ethic and Adaptability
+
+Staying updated:
+
+Regularly read technical blogs, participate in online courses, and attend tech meetups and webinars.
+Learning new technology:
+
+Quickly learned Docker and implemented containerization for microservices, enhancing deployment efficiency.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
