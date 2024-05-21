@@ -296,7 +296,79 @@ Abstract methods declared in an abstract class must be implemented by the subcla
 Abstract classes are used when you want to provide a common interface for a group of related classes, but you don't want to provide a complete implementation.
 
 
+33. What is Multithreading
+Java me multithreading ka istemal karke kaise program ko efficient banaya jata hai, iske liye hum Thread class ya Runnable interface ka use kar sakte hain. Niche ek example diya gaya hai jo dikhata hai kaise hum ek program me multithreading implement kar sakte hain.
 
+Example:
+Sochiye aap ek program likh rahe hain jo ek website se data fetch karta hai aur phir us data ko process karta hai. Agar aap ye sab kuch ek hi thread me karenge to pehle data fetch hoga, phir process hoga. Matlab, jab tak data fetch ho raha hai, processing ka kaam ruk jata hai.
+
+Agar hum join method use nahi karte hain to, main thread wait nahi karega aur directly next statement execute ho jayegi. Iska matlab, main thread program ko khatam kar dega bina ye check kiye ki worker threads (fetching aur processing threads) complete hue hain ya nahi.
+
+Without Multithreading:
+Data fetch karo.
+Data process karo.
+Total samay: Data fetch ka samay + Data process ka samay
+
+With Multithreading:
+Ek thread data fetch karta rahega.
+Dusra thread simultaneously data ko process karta rahega.
+Total samay: Max(Data fetch ka samay, Data process ka samay)
+
+Matlab, dono kaam parallelly chalenge, aur aapka overall program ka samay kam ho jayega.
+
+Example Code (Java):
+java
+Copy code
+class FetchDataThread extends Thread {
+    public void run() {
+        System.out.println("Fetching data...");
+        try {
+            Thread.sleep(5000); // Soch ke chaliye data fetch karne me 5 seconds lagte hain
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Data fetched!");
+    }
+}
+
+class ProcessDataThread extends Thread {
+    public void run() {
+        System.out.println("Processing data...");
+        try {
+            Thread.sleep(3000); // Soch ke chaliye data process karne me 3 seconds lagte hain
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Data processed!");
+    }
+}
+
+public class MultiThreadingExample {
+    public static void main(String[] args) {
+        // Do threads banao
+        FetchDataThread fetchThread = new FetchDataThread();
+        ProcessDataThread processThread = new ProcessDataThread();
+
+        // Dono threads ko start karo
+        fetchThread.start();
+        processThread.start();
+
+        // Dono threads khatam hone ka wait karo
+        try {
+            fetchThread.join();
+            processThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Done with fetching and processing!");
+    }
+}
+Explanation:
+Humne FetchDataThread aur ProcessDataThread classes banayi jo Thread class ko extend karti hain.
+run method ke andar humne fetch aur process operations define kiye hain.
+main method me humne do threads banaye aur unhe start kiya.
+join method use karke, hum ensure karte hain ki main thread wait kare jab tak dono threads apna kaam complete nahi kar lete.
 
 
 
