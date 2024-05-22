@@ -370,7 +370,95 @@ run method ke andar humne fetch aur process operations define kiye hain.
 main method me humne do threads banaye aur unhe start kiya.
 join method use karke, hum ensure karte hain ki main thread wait kare jab tak dono threads apna kaam complete nahi kar lete.
 
+======================================================================================================================================
+1. Predicate
+Predicate<T> ek functional interface hai jo ek argument leta hai aur ek boolean value return karta hai. Iska use logical conditions check karne ke liye kiya jata hai.
 
+Example:
+import java.util.function.Predicate;
+
+public class PredicateExample {
+    public static void main(String[] args) {
+        Predicate<Integer> isEven = number -> number % 2 == 0;
+
+        System.out.println(isEven.test(4)); // Output: true
+        System.out.println(isEven.test(7)); // Output: false
+    }
+}
+2. Consumer
+Consumer<T> ek functional interface hai jo ek argument leta hai aur koi result return nahi karta. Iska use data ko process karne ke liye kiya jata hai, bina kuch return kiye.
+
+Example:
+import java.util.function.Consumer;
+
+public class ConsumerExample {
+    public static void main(String[] args) {
+        Consumer<String> printMessage = message -> System.out.println(message);
+
+        printMessage.accept("Hello, World!"); // Output: Hello, World!
+    }
+}
+3. Supplier
+Supplier<T> ek functional interface hai jo koi argument nahi leta aur ek result return karta hai. Iska use values ko supply karne ke liye kiya jata hai.
+
+Example:
+import java.util.function.Supplier;
+
+public class SupplierExample {
+    public static void main(String[] args) {
+        Supplier<String> getMessage = () -> "Hello, World!";
+
+        System.out.println(getMessage.get()); // Output: Hello, World!
+    }
+}
+ Function
+Function<T, R> ek functional interface hai jo ek argument leta hai aur ek result return karta hai. Iska use input ko ek output me map karne ke liye kiya jata hai.
+
+Example:
+import java.util.function.Function;
+
+public class FunctionExample {
+    public static void main(String[] args) {
+        Function<Integer, String> convertToString = number -> "Number: " + number;
+
+        System.out.println(convertToString.apply(5)); // Output: Number: 5
+    }
+}
+Combined Example
+Yeh ek example hai jo Predicate, Consumer, aur Supplier ko ek saath use karta hai:
+import java.util.function.Predicate;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+public class CombinedExample {
+    public static void main(String[] args) {
+        // Predicate to check if a number is positive
+        Predicate<Integer> isPositive = number -> number > 0;
+        
+        // Consumer to print a message
+        Consumer<String> printMessage = message -> System.out.println(message);
+        
+        // Supplier to provide a default message
+        Supplier<String> defaultMessage = () -> "Default Message";
+
+        int number = 5;
+        
+        // Use Predicate
+        if (isPositive.test(number)) {
+            // Use Consumer
+            printMessage.accept("Number is positive: " + number);
+        } else {
+            // Use Supplier
+            printMessage.accept(defaultMessage.get());
+        }
+    }
+}
+Output :
+Number is positive: 5
+
+
+
+======================================================================================================================================
 
 
 
