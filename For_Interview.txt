@@ -4,6 +4,12 @@ Java mein "Singleton" ek design pattern hai jo ek class ko aise implement karta 
 
 Singleton pattern ka upyog jab karna hota hai jab aapko ek class ki sirf ek hi instance chahiye hoti hai, jaise ki configuration manager, logger, database connection, etc. Isse aap unnecessary object creation se bachate hain aur system resources ko optimize kar sakte hain.
 
+"Singleton" is a design pattern in Java that implements a class in such a way that only one instance (object) can be created.
+
+The Singleton pattern is used when you need only one instance of a class, such as for a configuration manager, logger, database connection, etc. It helps you avoid unnecessary object creation and optimize system resources.
+
+
+
 Ek basic implementation ka example:
 
 java
