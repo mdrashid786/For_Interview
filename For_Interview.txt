@@ -15,6 +15,50 @@ public class MissingNumberFinder {
         System.out.println("The missing number is: " + missingNumber);
     }
 }
+
+what is anagram in java with example.
+
+An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. For example, the word "listen" is an anagram of "silent".
+
+import java.util.Arrays;
+
+public class AnagramExample {
+
+    public static boolean areAnagrams(String str1, String str2) {
+        // Remove all whitespace and convert strings to lower case
+        str1 = str1.replaceAll("\\s", "").toLowerCase();
+        str2 = str2.replaceAll("\\s", "").toLowerCase();
+
+        // If lengths of strings are different, they cannot be anagrams
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        // Convert strings to character arrays
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+
+        // Sort the character arrays
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        // Check if sorted character arrays are equal
+        return Arrays.equals(charArray1, charArray2);
+    }
+
+    public static void main(String[] args) {
+        String str1 = "Listen";
+        String str2 = "Silent";
+
+        if (areAnagrams(str1, str2)) {
+            System.out.println(str1 + " and " + str2 + " are anagrams.");
+        } else {
+            System.out.println(str1 + " and " + str2 + " are not anagrams.");
+        }
+    }
+}
+
+
 multithereding quetions with code example
 
 
