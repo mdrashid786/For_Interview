@@ -1,3 +1,24 @@
+find the missing number unshorted list
+import java.util.Arrays;
+
+public class MissingNumberFinder {
+    public static int findMissingNumber(int[] nums) {
+        int n = nums.length + 1;
+        int totalSum = n * (n + 1) / 2;
+        int arraySum = Arrays.stream(nums).sum();
+        return totalSum - arraySum;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {4,7,7, 1, 2, 8, 4, 5, 6}; // Example input array
+        int missingNumber = findMissingNumber(nums);
+        System.out.println("The missing number is: " + missingNumber);
+    }
+}
+multithereding quetions with code example
+
+
+
 1. java singletone kiya hota hai
 ChatGPT
 Java mein "Singleton" ek design pattern hai jo ek class ko aise implement karta hai jismein sirf ek hi instance (object) banaya ja sake. Iska matalab hai ki, jab bhi aap us class ka object banate hain, to wo hamesha wahi ek hi object return karta hai, chahe aap kitni baar bhi us class ka constructor call karein.
